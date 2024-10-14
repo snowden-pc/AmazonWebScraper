@@ -53,7 +53,11 @@ const AmazonSearch: React.FC = () => {
     }
   };
 
-  // Rest of the code remains the same
+  return (
+    <div className="container mx-auto p-4">
+      {/* Rest of the component remains the same */}
+    </div>
+  );
 };
 
 export default AmazonSearch;
