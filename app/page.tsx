@@ -45,7 +45,7 @@ const AmazonSearch: React.FC = () => {
         link: addAffiliateTag(item.link)
       }));
       setResults(dataWithAffiliateLinks);
-    } catch (err) {
+    } catch (error) {
       setError('An error occurred while fetching results. Please try again.');
     } finally {
       setLoading(false);
@@ -100,7 +100,7 @@ const AmazonSearch: React.FC = () => {
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full">
-                <a href={item.link} target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                <a href={item.link} target="_blank" rel="noopener noreferrorer">View on Amazon</a>
               </Button>
             </CardFooter>
           </Card>
