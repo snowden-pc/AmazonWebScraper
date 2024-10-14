@@ -55,7 +55,7 @@ const AmazonSearch: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-8 text-center">Amazon Product Search</h1>
-      <h5 className="text-3xl font-bold mb-8 text-center">Developed by @0xlipon</h5>
+      <p className="text-center text-gray-500 mt-8">with <3 by @0xlipon</p>
       <div className="flex justify-center mb-8">
         <div className="flex w-full max-w-md">
           <Input
