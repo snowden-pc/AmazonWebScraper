@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Star, Search } from 'lucide-react';
+import Image from 'next/image'; // Import the Image component
 
 interface AmazonItem {
   title: string;
@@ -90,14 +91,22 @@ const AmazonSearch: React.FC = () => {
             </CardHeader>
             <CardContent className="flex-grow">
               <div className="aspect-w-1 aspect-h-1 w-full mb-4">
-                <img src={item.imageUrl} alt={item.title} className="object-contain w-full h-full" />
+                <Image 
+                  src={item.imageUrl} 
+                  alt={item.title} 
+                  layout="responsive" // Use responsive layout
+                  width={500} // Specify width
+                  height={500} // Specify height
+                  className="object-contain" // Use object-contain for styling
+                />
               </div>
               <p className="text-2xl font-bold mb-2">${item.price}</p>
               <div className="flex items-center">
                 <Star className="text-yellow-400 mr-1" />
                 <span>{item.rating}</span>
               </div>
-            </CardContent>
+            </
+                        </CardContent>
             <CardFooter>
               <Button asChild className="w-full">
                 <a href={item.link} target="_blank" rel="noopener noreferrer">View on Amazon</a>
